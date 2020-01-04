@@ -107,11 +107,10 @@ class Search extends React.Component {
     console.log(suggestion.name)
     if(suggestion.com_ids !== undefined ){
       this.props.ids(suggestion.com_ids);
-      this.props.suggestName(suggestion.name);
     }else{
       this.props.ids([]);
     }
-
+ this.props.suggestName(suggestion.name);
   }
 
 

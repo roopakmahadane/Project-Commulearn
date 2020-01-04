@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { Container} from "shards-react";
+import { Container } from "shards-react";
 import Search from '../components/Search';
 import Title from '../components/Title';
 import Communities from '../components/Communities'
@@ -10,6 +9,10 @@ const contStyle = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
+  }
+  const pStyling = {
+    paddingTop: '50px',
+    fontSize: '1.5rem',
   }
 
 
@@ -42,6 +45,7 @@ handleSuggestName = (name) => {
      console.log(this.communityName)
     }
 }
+
 shouldComponentUpdate(nextProps, nextState) {
   if(nextState.name !== this.state.name){
     return true
@@ -59,8 +63,11 @@ shouldComponentUpdate(nextProps, nextState) {
 
     render() {
       let community = null;
-      if(this.ids.length){
+      if(this.ids.length ){
         community =  <Communities data={this.ids} key={this.state.keyCount} />
+      }
+      if(!this.ids.length && this.state.keyCount){
+        community = <p style={pStyling}>No Communities found.</p>
       }
         return (
             <Container style={contStyle}>
