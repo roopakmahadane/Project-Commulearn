@@ -1,0 +1,28 @@
+@media screen and (max-width: 299px) {
+    .faPlusCircle {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 799px) {
+    .faPlusCircle {
+        font-size: 25px;
+    }
+    .navLink {
+      padding-left: 0px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .faPlusCircle {
+        font-size: 30px;
+    }
+}
+.nav-link.disabled {
+    color: #ffffff;
+}
+
+.navBtn {
+  background-color:  #0066ff;
+  border-radius: 5px;
+}

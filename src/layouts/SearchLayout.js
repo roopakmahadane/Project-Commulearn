@@ -67,7 +67,7 @@ shouldComponentUpdate(nextProps, nextState) {
         community =  <Communities data={this.ids} key={this.state.keyCount} />
       }
       if(!this.ids.length && this.state.keyCount){
-        community = <p style={pStyling}>No Communities found.</p>
+        community = <p style={pStyling}>No Communities found</p>
       }
         return (
             <Container style={contStyle}>

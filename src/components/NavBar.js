@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Nav, NavItem, NavLink } from "shards-react";
 import { Container, Tooltip } from "shards-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import './stylesheets/navbar.css'
 
 
 class NavBar extends Component {
@@ -38,26 +39,31 @@ class NavBar extends Component {
                 fontSize: "25px"
             };
 
+            let classes=[];
+            if(!this.state.homeButton){
+              classes.push('navBtn');
+            }
+
         return (
-        <Container>
-           <Nav pills style={{ paddingTop: "20px"}}>
-            <NavItem >
-                <NavLink disabled={!this.state.homeButton} active={this.state.homeButton} href="/">
-                    Home
-                </NavLink>
-            </NavItem>
-                <NavItem style={style}>
-                    <NavLink   href="/new">
-                     <FontAwesomeIcon id="TooltipExample" icon={faPlus}/>
+        <Container className='navStyle'>
+           <Nav  style={{ paddingTop: "20px"}}>
+              <NavItem>
+                  <NavLink className={classes.join('')}  disabled={!this.state.homeButton} href="/">
+                      Home
+                  </NavLink>
+              </NavItem>
+              <NavItem style={style}>
+                    <NavLink className='navLink'  href="/new">
+                     <FontAwesomeIcon  className="faPlusCircle" id="TooltipExample" icon={faPlusCircle}/>
                        <Tooltip
-              open={this.state.open}
-              target="#TooltipExample"
-              toggle={this.toggle}
-        >
-          Add a new Community!
-        </Tooltip>
-                </NavLink>
-            </NavItem>
+                          open={this.state.open}
+                          target="#TooltipExample"
+                          toggle={this.toggle}
+                        >
+                          Add a new Community!
+                        </Tooltip>
+                     </NavLink>
+               </NavItem>
            </Nav>
         </Container>
         );
