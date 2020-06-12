@@ -23,7 +23,7 @@ class NavBar extends Component {
   }
 
     componentDidMount(){
-      if(window.location.pathname == "/new"){
+      if(window.location.pathname === "/new"){
         this.setState({homeButton : true});
       }
     }
@@ -52,9 +52,9 @@ class NavBar extends Component {
                       Home
                   </NavLink>
               </NavItem>
-              <NavItem style={style}>
-                    <NavLink className='navLink'  href="/new">
-                     <FontAwesomeIcon  className="faPlusCircle" id="TooltipExample" icon={faPlusCircle}/>
+              <NavItem style={style} >
+                    <NavLink disabled={this.state.homeButton} className='navLink'  href="/new">
+                     <FontAwesomeIcon   className="faPlusCircle" id="TooltipExample" icon={faPlusCircle}/>
                        <Tooltip
                           open={this.state.open}
                           target="#TooltipExample"

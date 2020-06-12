@@ -63,8 +63,6 @@ class Communities extends React.Component {
   }
 
   getContent = () => {
-    let temp = this.records[0]
-
     let content = (
       <div>
 

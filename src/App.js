@@ -1,9 +1,6 @@
 import React from 'react';
 
-
-import Communities from './components/Communities'
-
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/shards-ui/dist/css/shards.min.css"
 import NavBar from './components/NavBar';

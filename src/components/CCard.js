@@ -47,11 +47,11 @@ export default function CardBodyExample(props) {
   return (
     <Container>
           <Card className="community">
-          <a href={props.link}>
+          <a href={props.link} target="_blank" rel="noopener noreferrer">
             <img className="logo" src={source} alt="slack"/>
           </a>
             <CardBody>
-              <a href={props.link}>
+              <a href={props.link} target="_blank" rel="noopener noreferrer">
                 <CardTitle> {props.name} </CardTitle>
               </a>
 
