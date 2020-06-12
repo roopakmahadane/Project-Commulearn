@@ -3,8 +3,7 @@
 }
 
 .community {
-    width : 300px;
-    height:200px;
+
     text-align : center;
     align-items: center;
     margin: 0 auto 10px;
@@ -18,4 +17,8 @@
 
 .card-body {
     padding-top : 0px!important;
+}
+.row {
+    display: flex;
+    justify-content: space-evenly;
 }

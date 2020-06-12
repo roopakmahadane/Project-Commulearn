@@ -67,7 +67,7 @@ class Communities extends React.Component {
       <div>
 
           <div className="results">
-            <Row>
+            <Row className="row">
             {
               this.records.map(record => (
                 <Col sm="12" md="6" lg="4">
